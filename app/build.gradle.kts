@@ -37,4 +37,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("org.bouncycastle:bcprov-jdk15on:1.68")
+    implementation ("commons-codec:commons-codec:1.15")
 }
