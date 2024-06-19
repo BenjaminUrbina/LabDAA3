@@ -10,24 +10,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import org.apache.commons.codec.binary.Hex;
 
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "PruebaContras";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);//yaya
+        setContentView(R.layout.activity_main);//
         String password = "hola";
         String hashedPassword = MainActivity.hashPassword(password);
-        Log.d(TAG, "Clave hash generada: " + hashedPassword);
     }
     public static String hashPassword(String password) {
         try {
-            MessageDigest digest = MessageDigest.getInstance("MD5");
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(password.getBytes("UTF-8"));
             return Hex.encodeHexString(hash);
         } catch (Exception ex) {
