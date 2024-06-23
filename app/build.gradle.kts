@@ -39,4 +39,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("org.bouncycastle:bcprov-jdk15on:1.68")
     implementation ("commons-codec:commons-codec:1.15")
+    implementation ("androidx.security:security-crypto:1.1.0-alpha03")
 }
